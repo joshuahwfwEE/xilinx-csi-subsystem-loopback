@@ -1,4 +1,4 @@
-# xilinx-csi-subsystem-loopback-test
+# xilinx-csi-subsystem-loopback
 this project is based on xilinx dphy loopback repository, this repos will focus on how the controller interact with DPHY lane module and PPI protocol  
 mipi datatype:  
 
@@ -31,4 +31,11 @@ Data Type Description
 0x1C YUV420 8-bit (Chroma Shifted Pixel Sampling)
 0x1D YUV420 10-bit (Chroma Shifted Pixel Sampling)
 0x1E YUV422 8-bit
-0x1F YUV422 10-bit
+0x1F YUV422 10-bit  
+
+
+this repos conatin 2 project:
+
+1. csi rgb888 loopback test  
+2. csi raw14 loopback test  
+

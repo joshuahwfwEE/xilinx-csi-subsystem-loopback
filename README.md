@@ -1,6 +1,7 @@
 # xilinx-csi-subsystem-loopback
 this project is based on xilinx dphy loopback repository, this repos will focus on how the controller interact with DPHY lane module and PPI protocol  
-tuser[95:0]:
+tuser[95:0]:  
+
 bit[0]: sof    
 bit[32:1]: mipi datatype  
 bit[47:33]:  

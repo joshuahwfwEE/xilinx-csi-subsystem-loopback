@@ -64,11 +64,11 @@ c) 1000 pixel, RAW12:
       
 d) 1920 pixel RGB888:    
   
-   WC=1920 pixel x 24 bit /8 = 5760 bytes =  0x1680    
+    WC=1920 pixel x 24 bit /8 = 5760 bytes =  0x1680    
      
 d) 1920 pixel YUV422:    
   
-   WC=1920 pixel x 8 bit /8 = 1920 bytes =  0x780    
+    WC=1920 pixel x 8 bit /8 = 1920 bytes =  0x780    
   
   
 this repos conatin 2 project:  

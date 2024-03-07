@@ -1,5 +1,12 @@
 # xilinx-csi-subsystem-loopback
 this project is based on xilinx dphy loopback repository, this repos will focus on how the controller interact with DPHY lane module and PPI protocol  
+tuser[95:0]:
+bit[0]: sof    
+bit[32:1]: mipi datatype  
+bit[47:33]:  
+bit[63:48]: word count  
+bit[95:64]:  
+
 mipi datatype:  
 
 1.Data Type Description: 0x00 to 0x17  
@@ -37,10 +44,35 @@ Data Type Description: user defined
 0x30 to 0x37 User Defined Byte-based Data  
 0x38 to 0x3F Reserved  
 
+word count:  
+Because the MIPI CSI-2 TX Subsystem is transmitting video line-data as a single long packet, WC can be calculated as follows:    
+WC = (pixel number per-line) x (bit per-pixel) / 8  
 
+Please see the following WC calculation examples for different cases:  
 
-this repos conatin 2 project:
-
+a) 1000 pixel, RAW8:  
+  
+    WC=1000 pixel x 8 bit /8 = 1000 bytes = 0x03E8  
+  
+b) 1000 pixel, RAW10:  
+  
+    WC=1000 pixel x 10 bit /8 = 1250 bytes = 0x04E2  
+  
+c) 1000 pixel, RAW12:  
+  
+    WC=1000 pixel x 12 bit /8 = 1500 bytes =  0x05DC  
+      
+d) 1920 pixel RGB888:    
+  
+   WC=1920 pixel x 24 bit /8 = 5760 bytes =  0x1680    
+     
+d) 1920 pixel YUV422:    
+  
+   WC=1920 pixel x 8 bit /8 = 1920 bytes =  0x780    
+  
+  
+this repos conatin 2 project:  
+  
 1. csi rgb888 loopback test  
 2. csi raw14 loopback test  
 

@@ -71,14 +71,37 @@ d) 1920 pixel YUV422:
   
     WC=1920 pixel x 8 bit /8 = 1920 bytes =  0x780    
 
-example: rgb888 1L, 1PPC data width [47:0], burst rate: 124.5Mhz =1920x1080x60  
+example1:
+vpg datawidth: [24:0]  
+rgb888 1L, 1PPC data width [47:0], burst rate: 124.5Mhz =1920x1080x60   
 Pixel Encoding for Single Pixel per Beat with C_CSI_MAX_BPC =14:  
 tdata[7:0],6'b000000,  //G0[13:6]  
 tdata[15:8],6'b000000, //B0[27:20]   
 tdata[23:16],6'b000000,//R0[41:34]  
 6'b000000  
 
+example1:
+vpg datawidth: [24:0]  
+yuv422 4L, 1PPC data width [47:0], burst rate: 124.5Mhz =1920x1080x60   
+Pixel Encoding for Single Pixel per Beat with C_CSI_MAX_BPC =14:  
+tdata[7:0],6'b000000,  //Y0/Y1[13:6]    
+tdata[15:8],6'b000000, //U0/V0[27:20]   
+tdata[23:16],6'b000000,//R0[41:34]  
+6'b000000  
 
+example2:
+vpg datawidth: [95:0]  
+yuv422 4L, 4PPC data width [167:0], burst rate: 200Mhz = 32x64x97656.25  
+Pixel encoding for Quad Pixel per Beat with C_CSI_MAX_BPC =14:  
+tdata[7:0],6'b000000    //Y0[13:6]    
+tdata[15:8],6'b000000,  //U0[27:20]       
+tdata[23:16],6'b000000, //Y1[41:34]    
+tdata[31:24],6'b000000, //V0[55:48]    
+tdata[39:32],6'b000000, //Y2[69:62]  
+tdata[47:40],6'b000000, //U2[83:76]  
+tdata[55:48],6'b000000, //Y3[97:90]  
+tdata[63:56],6'b000000, //V2[111:104]  
+56'b0
   
 this repos conatin 2 project:  
   

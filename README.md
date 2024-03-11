@@ -80,7 +80,7 @@ tdata[15:8],6'b000000, //B0[27:20]
 tdata[23:16],6'b000000,//R0[41:34]  
 6'b000000  
 
-example1:
+example2:
 vpg datawidth: [24:0]  
 yuv422 4L, 1PPC data width [47:0], burst rate: 124.5Mhz =1920x1080x60   
 Pixel Encoding for Single Pixel per Beat with C_CSI_MAX_BPC =14:  
@@ -89,7 +89,17 @@ tdata[15:8],6'b000000, //U0/V0[27:20]
 tdata[23:16],6'b000000,//R0[41:34]  
 6'b000000  
 
-example2:
+example3:
+vpg datawidth: [47:0]  
+yuv422 4L, 2PPC data width [87:0], burst rate: 148.5Mhz =2200x1125x60    
+Pixel Encoding for dual Pixel per Beat with C_CSI_MAX_BPC =14:  
+tdata[7:0],6'b000000,  //Y0[13:6]    
+tdata[15:8],6'b000000, //U0[27:20]   
+tdata[23:16],6'b000000,//Y1[41:34]  
+tdata[31:24],6'b000000,//V0[55:48]
+32'b0
+
+example4:
 vpg datawidth: [95:0]  
 yuv422 4L, 4PPC data width [167:0], burst rate: 200Mhz = 32x64x97656.25  
 Pixel encoding for Quad Pixel per Beat with C_CSI_MAX_BPC =14:  

@@ -70,7 +70,15 @@ d) 1920 pixel RGB888:
 d) 1920 pixel YUV422:    
   
     WC=1920 pixel x 8 bit /8 = 1920 bytes =  0x780    
-  
+
+example: rgb888 1L, 1PPC data width [47:0], burst rate: 124.5Mhz =1920x1080x60  
+Pixel Encoding for Single Pixel per Beat with C_CSI_MAX_BPC =14:
+tdata[7:0],6'b000000,  //G0[13:6]  
+tdata[15:8],6'b000000, //B0[27:20]   
+tdata[23:16],6'b000000,//R0[41:34]  
+6'b000000  
+
+
   
 this repos conatin 2 project:  
   

@@ -96,7 +96,7 @@ Pixel Encoding for dual Pixel per Beat with C_CSI_MAX_BPC =14:
 tdata[7:0],6'b000000,  //Y0[13:6]    
 tdata[15:8],6'b000000, //U0[27:20]   
 tdata[23:16],6'b000000,//Y1[41:34]  
-tdata[31:24],6'b000000,//V0[55:48]
+tdata[31:24],6'b000000,//V0[55:48]  
 32'b0
 
 example4:

@@ -114,6 +114,6 @@ tdata[63:56],6'b000000, //V2[111:104]
   
 this repos conatin 2 project:  
   
-1. csi rgb888 loopback test  
-2. csi raw14 loopback test  
+1. csi rgb888 1L loopback test  
+2. csi YUV422 4L loopback test  
 

@@ -82,12 +82,11 @@ tdata[23:16],6'b000000,//R0[41:34]
 
 example2:
 vpg datawidth: [24:0]  
-yuv422 4L, 1PPC data width [47:0], burst rate: 124.5Mhz =1920x1080x60   
-Pixel Encoding for Single Pixel per Beat with C_CSI_MAX_BPC =14:  
+yuv422 4L, 1PPC data width [47:0], burst rate: 124.5Mhz =1920x1080x60     
+Pixel Encoding for Single Pixel per Beat with C_CSI_MAX_BPC =14:    
 tdata[7:0],6'b000000,  //Y0/Y1[13:6]    
-tdata[15:8],6'b000000, //U0/V0[27:20]   
-tdata[23:16],6'b000000,//R0[41:34]  
-6'b000000  
+tdata[15:8],6'b000000, //U0/V0[27:20]     
+20'b000000      
 
 example3:
 vpg datawidth: [47:0]  

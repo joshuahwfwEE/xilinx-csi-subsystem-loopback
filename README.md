@@ -40,13 +40,14 @@ Data Type Description: 0x28 to 0x2F RAW Data
 0x2E RAW16  
 0x2F Reserved    
 
-
 Data Type Description: user defined    
-0x30 to 0x37 User Defined Byte-based Data  
-0x38 to 0x3F Reserved    
+0x30 to 0x37 User Defined Byte-based Data (ex jpeg)  
+0x38 to 0x3F Reserved      
+  
 
-    
-bit[63:48]: the 16-bit Word Count (WC):  
+
+      
+bit[63:48]: the 16-bit Word Count (WC):    
 In the MIPI CSI-2 specification,   
 it defines the number of 8-bit data words in the Data Payload between the end of the Packet Header and the start of the Packet Footer.      
 No Packet Header, Packet Footer, or Packet Filler bytes will be included in the WC.  

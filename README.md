@@ -47,11 +47,10 @@ Data Type Description: user defined
 
     
 bit[63:48]: the 16-bit Word Count (WC):  
-In the MIPI CSI-2 specification, it defines the number of 8-bit data words in the Data Payload between the end of the Packet Header and the start of the Packet Footer.  
-
-No Packet Header, Packet Footer, or Packet Filler bytes will be included in the WC.
-
-MIPI CSI-2 TX Subsystem users needs to set the WC value correctly for a correct Subsystem operation.
+In the MIPI CSI-2 specification,   
+it defines the number of 8-bit data words in the Data Payload between the end of the Packet Header and the start of the Packet Footer.      
+No Packet Header, Packet Footer, or Packet Filler bytes will be included in the WC.  
+Hence users needs to set the WC value correctly for a correct Subsystem operation in MIPI CSI-2 TX Subsystem.  
 
 The receiver side uses the WC value to determine the end of the Packet Payload.
 Because the MIPI CSI-2 TX Subsystem is transmitting video line-data as a single long packet, WC can be calculated as follows:    

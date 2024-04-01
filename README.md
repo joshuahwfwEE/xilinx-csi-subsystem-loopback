@@ -8,7 +8,7 @@ bit[47:33]:
 bit[63:48]: word count  
 bit[95:64]:  
 
-mipi datatype:  
+bit[32:1]: mipi datatype:    
 
 1.Data Type Description: 0x00 to 0x17  
 0x00 to 0x07 Synchronization Short Packet Data Types    
@@ -43,9 +43,10 @@ Data Type Description: 0x28 to 0x2F RAW Data
 
 Data Type Description: user defined    
 0x30 to 0x37 User Defined Byte-based Data  
-0x38 to 0x3F Reserved  
+0x38 to 0x3F Reserved    
 
-word count:  
+    
+bit[63:48]: word count:    
 Because the MIPI CSI-2 TX Subsystem is transmitting video line-data as a single long packet, WC can be calculated as follows:    
 WC = (pixel number per-line) x (bit per-pixel) / 8  
 

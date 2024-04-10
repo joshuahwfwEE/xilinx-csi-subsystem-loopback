@@ -77,7 +77,7 @@ d) 1920 pixel RGB888:
      
 d) 1920 pixel YUV422:    
   
-    WC=1920 pixel x 8 bit /8 = 1920 bytes =  0x780    
+    WC=1920 pixel x 16 bit /8 = 3840 bytes =  0x0F00   
 
 example1:  
 vpg datawidth: [24:0]  
